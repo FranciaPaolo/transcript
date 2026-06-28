@@ -137,15 +137,13 @@ export function TranscriptionUploader() {
               : entry,
           ),
         );
-      } catch {
+      } catch (error) {
+        const message =
+          error instanceof Error ? error.message : "Transcription failed.";
         setFiles((current) =>
           current.map((entry) =>
             entry.id === item.id
-              ? {
-                  ...entry,
-                  status: "error",
-                  error: "Transcription failed. Try again when the API is connected.",
-                }
+              ? { ...entry, status: "error", error: message }
               : entry,
           ),
         );
