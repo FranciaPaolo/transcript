@@ -13,7 +13,8 @@ The app is very easy:
 
 Backend listens on http://localhost:8000
 
-You can also try it via Postman.
+You can also try it via Postman.\
+See respective folder for starting it [Backend](Backend/readme.md)
 
 
 ### POST /api/transcribe
@@ -30,3 +31,9 @@ This method is to get the progress and the result of the transcript.
 
 Parameters
 * jobid: This is job id returned by the /api/transcribe method
+
+
+## UI webapplication
+
+UI is a simple rect application\
+See respective folder for starting it [UI](UI/README.md)
